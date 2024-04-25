@@ -3,7 +3,7 @@ import { useState } from 'react';
 import FileService from './Service/FileService';
 import * as d3 from 'd3';
 
-export default function FileUpload({ onDataUpdate }) {
+export default function FileUpload({ onDataUpdate,File }) {
    
     const [data, setData] = useState([])  
   
@@ -15,6 +15,7 @@ export default function FileUpload({ onDataUpdate }) {
       };  
       const handleUpload = async () => {
         if (file) {
+          console.log(file.name);
           console.log("Uploading file...");
     
           const formData = new FormData();
@@ -25,8 +26,11 @@ export default function FileUpload({ onDataUpdate }) {
             service.addFile(formData).then(res=>{
                // console.log(res);
                 setData(res)
+                console.log("istediğim data");
+                console.log(res);
                 //console.log("resdata kısmı"+res[1]);
                 onDataUpdate(res);
+                File(file.name)
                console.log(res);
               
             }).catch(er=>{
