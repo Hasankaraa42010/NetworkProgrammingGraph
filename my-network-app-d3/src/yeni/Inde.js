@@ -69,12 +69,13 @@ export default function Inde
             .attr('x2', (link) => link.target.x)
             .attr('y2', (link) => link.target.y);
         });
-      }, []);; // useEffect içinde çalıştırılacak kod, yalnızca bileşen monte edildiğinde bir kez çalışacak şekilde ayarlandı
+       
+      }, []);
     
   return (
     <div style={{margin:0,overflow:'hidden'}}>
       
-        <svg id="container" width={1440} height={1440} style={{backgroundColor:'aqua'}}></svg>
+        <svg id="container" width={1440} height={1440} style={{backgroundColor:'white'}}></svg>
     </div>
   )
 }

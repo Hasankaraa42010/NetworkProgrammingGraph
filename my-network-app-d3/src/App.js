@@ -19,15 +19,10 @@ const [file, setFile] = useState("Ana Dosya")
     <div>
       <FileUpload onDataUpdate={handleDataUpdate} File={handleFileChange}/>
       {file !== 'Ana Dosya' && <Inde File={file} uploadedData={uploadedData} />}
+      
+  
+      
 
-      {/* Aşağıdaki kısımın açıklamasını kaldırıp kullanmak istediğiniz bileşenleri ekleyebilirsiniz */}
-      {/* 
-      <TreeDiagram data={data} />
-      <TreeDiagram data={data} />
-      <FileUpload onDataUpdate={handleDataUpdate} />
-      {uploadedData && Object.keys(uploadedData).length > 0 && <ul></ul>}
-      <div>kara</div> 
-      */}
     </div>
   );
 }
